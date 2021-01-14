@@ -18,22 +18,20 @@ In financial industries, churn users are users who were active in past days but 
 - Flask
 ## Project Setup
 ### Download cloudera VM, unzip it and import in your virtual box
-> Vmware Link: https://downloads.cloudera.com/demo_vm/vmware/cloudera-quickstart-vm-5.13.0-0-vmware.zip
-
+> Vmware Link: https://downloads.cloudera.com/demo_vm/vmware/cloudera-quickstart-vm-5.13.0-0-vmware.zip \
 > Vitrualbox Link: https://downloads.cloudera.com/demo_vm/virtualbox/cloudera-quickstart-vm-5.13.0-0-virtualbox.zip
 ### Enable repo to install dependencies
 - cd /etc/yum.repos.d/
 - cp CentOS-Base.repo CentOS-Base.repo.old
 - vi CentOS-Base.repo looks
-- Add below contents
-> [base]
-> name=CentOS-$releasever - Base
-> \#
-> mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
-> baseurl=http://vault.centos.org/6.9/os/$basearch
-> gpgcheck=1
-> gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6
-> exclude=redhat-logos
+- Add below contents \
+[base] \
+name=CentOS-$releasever - Base \
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os \
+baseurl=http://vault.centos.org/6.9/os/$basearch \
+gpgcheck=1 \
+gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6 \
+exclude=redhat-logos
 - **Donot use yum update command since it causes to fail dependency in existing clodera setup**
 ```
 yum clean all
@@ -49,7 +47,8 @@ yum install git # For cloning project later
 ssh -T git@github.com
 git clone <copied_link>
 cd chrun-analysis
-chmod 751 initial_setup.sh
+chmod 751 initial_setup.sh install_python.sh
+sudo ./install_python.sh
 ./initial_setup.sh
 ```
 #### Running data injection
@@ -65,7 +64,7 @@ chmod 751 initial_setup.sh
 ./churn_api.py
 ```
 Test functionality by going to browser at
-> http://127.0.0.1:5000/churn_trend/all
+> http://127.0.0.1:5000/churn_trend/all \
 > http://127.0.0.1:5000/churn_distribution/2020/02
-- all is product name for which churn trend is to be visualized
-- /2020/02 is year and month for which churn distribution is to be visualized among all
+- **all** is product name for which churn trend is to be visualized
+- **/2020/02** is year and month for which churn distribution is to be visualized among all
