@@ -25,14 +25,14 @@ In financial industries, churn users are users who were active in past days but 
 - cd /etc/yum.repos.d/
 - cp CentOS-Base.repo CentOS-Base.repo.old
 - vi CentOS-Base.repo looks
-- Add below contents
-[base]
-name=CentOS-$releasever - Base
-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
-baseurl=http://vault.centos.org/6.9/os/$basearch
-gpgcheck=1
-gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6
-exclude=redhat-logos
+- Add below contents \
+[base] \
+name=CentOS-$releasever - Base \
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os \
+baseurl=http://vault.centos.org/6.9/os/$basearch \
+gpgcheck=1 \
+gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6 \
+exclude=redhat-logos \
 - **Donot use yum update command since it causes to fail dependency in existing clodera setup**
 ```
 yum clean all
