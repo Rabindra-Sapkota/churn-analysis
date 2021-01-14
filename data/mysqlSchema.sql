@@ -1,3 +1,7 @@
+CREATE USER 'etluser'@'%' identified by 'etlpassword';
+GRANT SELECT ON store_detail.* TO 'etluser'@'%';
+FLUSH PRIVILEGES;
+
 CREATE DATABASE IF NOT EXiSTS store_detail;
 
 USE store_detail;

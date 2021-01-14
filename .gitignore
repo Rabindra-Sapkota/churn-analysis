@@ -1,4 +1,4 @@
 *.java
-log/
+*.log
 report/
-bin/__pycache__/
+__pycache__/

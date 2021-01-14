@@ -168,7 +168,7 @@ echo -e "\n$( date +'%Y-%m-%d %H:%M:%S' ) Migrating $PRODUCT_INCREMENTAL_TABLE t
 Hive_Query "INSERT INTO warehouserepo.productinfo SELECT id, name FROM $PRODUCT_INCREMENTAL_TABLE"
 
 echo -e "\n$( date +'%Y-%m-%d %H:%M:%S' ) Migrating $PRODUCT_INCREMENTAL_TABLE to warehouse"
-Hive_Query 'INSERT INTO warehouserepo.transactionInfo
+Hive_Query 'INSERT INTO warehouserepo.transactioninfo
 
             SELECT
               t.userid,
