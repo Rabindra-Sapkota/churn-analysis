@@ -64,7 +64,7 @@ chmod 751 initial_setup.sh
 ./churn_api.py
 ```
 Test functionality by going to browser at
-> http://127.0.0.1:5000/churn_trend/all
+> http://127.0.0.1:5000/churn_trend/all \
 > http://127.0.0.1:5000/churn_distribution/2020/02
 - all is product name for which churn trend is to be visualized
 - /2020/02 is year and month for which churn distribution is to be visualized among all
