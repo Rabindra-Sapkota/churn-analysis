@@ -18,10 +18,8 @@ In financial industries, churn users are users who were active in past days but 
 - Flask
 ## Project Setup
 ### Download cloudera VM, unzip it and import in your virtual box
-> Vmware Link: https://downloads.cloudera.com/demo_vm/vmware/cloudera-quickstart-vm-5.13.0-0-vmware.zip
+> Vmware Link: https://downloads.cloudera.com/demo_vm/vmware/cloudera-quickstart-vm-5.13.0-0-vmware.zip \
 > Vitrualbox Link: https://downloads.cloudera.com/demo_vm/virtualbox/cloudera-quickstart-vm-5.13.0-0-virtualbox.zip
-### Install Python
-> sudo ./install_python.sh
 ### Enable repo to install dependencies
 - cd /etc/yum.repos.d/
 - cp CentOS-Base.repo CentOS-Base.repo.old
@@ -49,6 +47,7 @@ yum install git # For cloning project later
 ssh -T git@github.com
 git clone <copied_link>
 cd chrun-analysis
+sudo ./install_python.sh
 chmod 751 initial_setup.sh
 ./initial_setup.sh
 ```
