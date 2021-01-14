@@ -26,18 +26,19 @@ In financial industries, churn users are users who were active in past days but 
 - cp CentOS-Base.repo CentOS-Base.repo.old
 - vi CentOS-Base.repo looks
 - Add below contents
-[base]
-name=CentOS-$releasever - Base
-\# mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
-baseurl=http://vault.centos.org/6.9/os/$basearch
-gpgcheck=1
-gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6
-exclude=redhat-logos
+> [base]
+> name=CentOS-$releasever - Base
+> \#
+> mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+> baseurl=http://vault.centos.org/6.9/os/$basearch
+> gpgcheck=1
+> gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6
+> exclude=redhat-logos
 - **Donot use yum update command since it causes to fail dependency in existing clodera setup**
-~~
+```
 yum clean all
 yum install git # For cloning project later
-~~
+```
 ### Configure hive setup to avoid printing logs
 - vi /usr/lib/hive/bin/hive
 - Comment section inside # add Spark assembly jar to the classpath
