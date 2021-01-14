@@ -32,7 +32,7 @@ mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo
 baseurl=http://vault.centos.org/6.9/os/$basearch \
 gpgcheck=1 \
 gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6 \
-exclude=redhat-logos \
+exclude=redhat-logos
 - **Donot use yum update command since it causes to fail dependency in existing clodera setup**
 ```
 yum clean all
