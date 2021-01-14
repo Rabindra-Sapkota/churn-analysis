@@ -47,8 +47,8 @@ yum install git # For cloning project later
 ssh -T git@github.com
 git clone <copied_link>
 cd chrun-analysis
+chmod 751 initial_setup.sh install_python.sh
 sudo ./install_python.sh
-chmod 751 initial_setup.sh
 ./initial_setup.sh
 ```
 #### Running data injection
